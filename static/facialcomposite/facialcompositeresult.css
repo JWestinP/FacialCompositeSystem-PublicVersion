@@ -1,0 +1,259 @@
+/*
+Reset stylesheet
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*
+Start coding here
+*/
+
+body {
+    background-color: black;
+}
+
+.header {
+    height: 75px;
+    border-bottom: 1px solid white;
+    background: linear-gradient(to bottom, rgb(80, 74, 74) 35%,  rgb(26, 25, 25) 65%);
+    text-align: center;
+}
+
+.header a {
+    text-decoration: none; 
+}
+
+.header p{
+    font-weight: bolder;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;    
+    padding-top: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    gap: 10px; 
+}
+
+.sketch_div {
+    width: 400px; 
+    max-height: 650px; 
+    background-image: url('/media/home/home logo.png');
+    background-size: cover; 
+    background-position: center; 
+    margin-left: 35px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.sketch_div .sketch_title {
+    border-bottom:1px solid white;
+    background: linear-gradient(to bottom, rgb(80, 74, 74) 35%,  rgb(26, 25, 25) 65%);
+    border-radius: 20px 20px 0 0; 
+}
+
+.sketch_div .sketch_title p {
+    font-weight: bolder;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bolder;    
+    padding-top: 10px;    
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+.sketch_div img {
+    transform: scale(0.8);
+}
+
+.matched_div {
+    display: block;
+    width: 400px;
+    max-height: 650px;
+    overflow-y: auto; 
+    margin-left: 20px;
+    margin-top: 20px;
+    background-image: url('/media/home/home logo.png');
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.matched_div .matched_title {
+    border-bottom:1px solid white;
+    background: linear-gradient(to bottom, rgb(80, 74, 74) 35%,  rgb(26, 25, 25) 65%);
+    border-radius: 20px 20px 0 0; 
+    margin-bottom: 10px;
+}
+
+.matched_div .matched_title p {
+    font-weight: bolder;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bolder;    
+    padding-top: 10px;    
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+.matched_div .matched_images {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.information_div {
+    width: 430px;
+    max-height: 650px;
+    overflow-y: auto; 
+    margin-right: 60px;
+    margin-top: 20px;
+    background-image: url('/media/home/home logo.png');
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.information_div .information_title {
+    border-bottom:1px solid white;
+    background: linear-gradient(to bottom, rgb(80, 74, 74) 35%,  rgb(26, 25, 25) 65%);
+    border-radius: 20px 20px 0 0; 
+    margin-bottom: 10px;
+}
+
+.information_div .information_title p {
+    font-weight: bolder;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bolder;    
+    padding-top: 10px;    
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+.information_div #profile_div {
+    font-weight: bolder;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;    
+    padding-top: 10px;    
+    padding-bottom: 10px;
+    padding-left: 5px;
+    align-items: center;
+}
+
+#error_widget {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+}

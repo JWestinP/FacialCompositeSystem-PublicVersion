@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="matched-features-container">
+        {% for feature in matched_features %}
+            <div class="matched_feature">
+                <img src="{{ feature.image_url }}" alt="{{ feature.description }}">
+            </div>
+        {% endfor %}
+    </div>
+</div>

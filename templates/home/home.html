@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'home/home.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit&display=swap">
+        <link rel="icon" type="image/x-icon" href="/media/icon/syslogo.ico">
+        <title>HOME</title>
+        <div class="header">
+            <a href="{% url 'home' %}">
+            <p>AI-POWERED FACIAL COMPOSITE SYSTEM</p>
+            </a>
+        </div>
+    </head>
+    <body>
+        <div class="description_div">
+            <div class="description_title">
+                <p>SYSTEM DESCRIPTION</p>
+            </div>
+            <div class="description_content">
+                <p>
+                    Welcome to the facial composite image building system. This platform simplifies the process of creating visual representations of individuals based on text descriptions. Users can input text descriptions of facial features, and our system converts them into visual representations, offering a starting point for building composite images. With access to a diverse range of images that match the descriptions, users can easily select the most suitable visual components for their composite image. They can then mix and match facial features from different images to accurately recreate the appearance of a perpetrator.
+                </p>
+                <p>
+                    This platform provides tools to enhance facial features, allowing users to fine-tune the composite image for a closer resemblance to the individual being described. Additionally, the system offers a matching feature, comparing the created facial composite with similar images in the database to assist in the identification and apprehension of suspects. This user-friendly system is here to streamline the process and aid in the pursuit of justice.
+                </p>
+            </div>
+        </div>
+        <div class="faq_div">
+            <div class="faq_title">
+                <p>SYSTEM STEP BY STEP GUIDE</p>
+            </div>
+            <div class="faq_content">
+                <p class="questions">
+                    Continue from Home: 
+                </p>
+                <p class="answers">
+                    From the home page, press the continue button to access the main features of the system.
+                </p>
+
+                <p class="questions">
+                    Facial Feature Description: 
+                </p>
+                <p class="answers">
+                    Input text descriptions of facial features or choose a pre-existing feature that closely matches your description from the available options.
+                </p>
+
+                <p class="questions">
+                    Edit Facial Features: 
+                </p>
+                <p class="answers">
+                    Fine-tune the selected facial features to closely resemble the person you are envisioning. Use editing tools to adjust scales, details, and other attributes as needed.
+                </p>
+
+                <p class="questions">
+                    Save and Submit:
+                </p>
+                <p class="answers">
+                    Once satisfied with the facial composite, save your creation and submit it if it's complete.
+                </p>
+
+                <p class="questions">
+                    Check Results: 
+                </p>
+                <p class="answers">
+                    After submission, check the results to view images that closely resemble your facial composite creation. Review the potential matches and assess their likeness to the individual described.
+                </p>
+            </div>
+            <div class="buttons_div">
+                    <a href="{% url 'logout' %} " class="logout_button">Logout</a>
+                    <a href="{% url 'facialcomposite' %}" class="continue_button">Continue</a>
+            </div>
+        </div>
+        
+    </body>
+</html>

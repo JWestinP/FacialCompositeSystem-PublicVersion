@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'facialcomposite/facialcompositestyle.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit&display=swap">
+        <link rel="icon" type="image/x-icon" href="/media/icon/syslogo.ico">
+        <title>Facial Composite</title>
+        <div class="header">
+            <a href="{% url 'home' %}">
+                <p>AI-POWERED FACIAL COMPOSITE SYSTEM</p>
+            </a>
+        </div>
+    </head>
+    <body>
+        <div id="error_widget"></div>
+
+        <div id="initiation_widget" style="display: none;">
+            <p>The process is being initiated. Please wait...</p>
+        </div>
+
+        <div id="completion_widget" style="display: none;">
+            <p>The process is complete! Click the "Check similar images" button for the result.</p>
+        </div>
+        
+        <div class="container">
+            <div class="form_container">
+                <div class="form_title">
+                    <p>Description</p>
+                </div>
+                <div class="category_form" id="face_form">
+                    <form method="post" action="{% url 'facialcomposite' %}" onsubmit="return handleTextForm('face_form');">
+                    {% csrf_token %}
+                    <label for="description">Face Shape</label>
+                    <input type="text" id="description" name="description">
+
+                    <button type="submit" name="face_shape">Search face shapes</button>
+                    </form>
+                </div>
+
+                <div class="category_form" id="hair_form">
+                    <form method="post" action="{% url 'facialcomposite' %}" onsubmit="return handleTextForm('hair_form');">
+                    {% csrf_token %}
+                    <label for="description">Hair Style</label>
+                    <input type="text" id="description" name="description">
+
+                    <button type="submit" name="hair_style">Search hair styles</button>
+                    </form>
+                </div>
+                
+                <div class="category_form" id="eyebrows_form">
+                    <form method="post" action="{% url 'facialcomposite' %}" onsubmit="return handleTextForm('eyebrows_form');">
+                    {% csrf_token %}
+                    <label for="description">Eyebrows Shape</label>
+                    <input type="text" id="description" name="description">
+
+                    <button type="submit" name="eyebrows_shape">Search eyebrows shape</button>
+                    </form>
+                </div>
+
+                <div class="category_form" id="eyes_form">
+                <form method="post" action="{% url 'facialcomposite' %}" onsubmit="return handleTextForm('eyes_form');">
+                    {% csrf_token %}
+                    <label for="description">Eyes Shape</label>
+                    <input type="text" id="description" name="description">
+
+                    <button type="submit" name="eyes_shape">Search eyes shapes</button>
+                </form>
+                </div>
+
+                <div class="category_form" id="ears_form">
+                <form method="post" action="{% url 'facialcomposite' %}" onsubmit="return handleTextForm('ears_form');">
+                    {% csrf_token %}
+                    <label for="description">Ears Shape</label>
+                    <input type="text" id="description" name="description">
+
+                    <button type="submit" name="ears_shape">Search ears shape</button>
+                </form>
+                </div>
+
+                <div class="category_form" id="nose_form">
+                <form method="post" action="{% url 'facialcomposite' %}" onsubmit="return handleTextForm('nose_form');">
+                    {% csrf_token %}
+                    <label for="description">Nose Shape</label>
+                    <input type="text" id="description" name="description">
+
+                    <button type="submit" name="nose_shape">Search nose shape</button>
+                </form>
+                </div>
+
+                <div class="category_form" id="lips_form" >
+                <form method="post" action="{% url 'facialcomposite' %}" onsubmit="return handleTextForm('lips_form');">
+                    {% csrf_token %}
+                    <label for="description">Lips shape</label>
+                    <input type="text" id="description" name="description">
+
+                    <button type="submit" name="lips_shape">Search lips shape</button>
+                </form>
+                </div>
+                
+                <button id = 'deleteImageButton' onclick="deleteSelectedImage()">Delete selected feature</button>
+            </div>
+
+            <div class="selected_container">
+                <div class="selected_title">
+                    <p>Canvas</p>
+
+                    <div class="selected_buttons">
+                        <div class="submit_sketch">
+                            <form id="saveImageForm" method="post" class="form_buttons" action="/save_image/">
+                                {% csrf_token %}
+                                <button type="submit" id="saveButton">Submit Sketch</button>
+                            </form>
+                        </div>
+                        <div class="check_result">
+                            <form id="find_similar_image" method="post" class="form_buttons" action="/composite_match_result/">
+                                {% csrf_token %}
+                                <button>Check similar images</button>
+                            </form>
+                        </div>
+                        <div class="database_extract">
+                            <form method="post" action="{% url 'database_feature_extract' %}">
+                                {% csrf_token %}
+                                <button type="submit">Extract Features from Database Images</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div> 
+
+            <div class="option_container">
+                <div class="option_title">
+                    <p>Facial Features</p>
+                </div>
+                <form id="imageSelectionForm" method="post" class="feature_select" action="{% url 'chosen_features' %}">
+                    {% csrf_token %}
+                    <div class="matched_features" id="matched_features">
+
+                    </div>
+                    <button id="add_button" type="button" onclick="addSelectedFeature()">Add</button>
+                </form>
+            </div>
+
+        </div>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="{% static 'facialcomposite/facialcomposite.js' %}"></script>
+</html>

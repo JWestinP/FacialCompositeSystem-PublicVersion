@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'facialcomposite/facialcompositeresult.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit&display=swap">
+    <link rel="icon" type="image/x-icon" href="/media/icon/syslogo.ico">
+    <div class="header">
+        <a href="{% url 'home' %}">
+            <p>AI-POWERED FACIAL COMPOSITE SYSTEM</p>
+        </a>
+    </div>
+    <title>Composite Match Result</title>
+</head>
+<body>
+    <div id="error_widget"></div>
+    <div class="container">
+        <div class="sketch_div">
+            <div class="sketch_title">
+                <p>SUBMITTED SKETCH</p>
+            </div>
+            <img src="{{ image_full_path }}" alt="Image Path">
+        </div>
+        
+        <div class="matched_div">
+            <div class="matched_title">
+                <p>MATCHED PROFILES</p>
+            </div>
+            <div class="matched_images">
+                {% for instance in instances %}
+                <div class="profile_image">
+                    <img src="{{ instance.criminal_mugshot.url }}" alt="Instance Image" onclick="showProfile('{{ instance.criminal_id }}')">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="information_div">
+            <div class="information_title">
+                <p>PROFILE INFORMATION</p>
+            </div>
+            <div id="profile_div">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{% static 'facialcomposite/facialcomposite.js' %}"></script>
+</html>

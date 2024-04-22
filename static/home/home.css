@@ -1,0 +1,240 @@
+/*
+Reset stylesheet
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*
+Start coding here
+*/
+
+body {
+    background: rgb(26, 25, 25);
+}
+
+.header {
+    height: 75px;
+    border-bottom: 1px solid white;
+    background: linear-gradient(to bottom, rgb(80, 74, 74) 35%,  rgb(26, 25, 25) 65%);
+    text-align: center;
+}
+.header a {
+    text-decoration: none; 
+}
+
+.header p{
+    font-weight: bolder;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;    
+    padding-top: 20px;
+}
+
+.description_div {
+    position: absolute; 
+    left: 0; 
+    height: 650px;
+    width: 550px;
+    margin-left: 120px;
+    margin-top: 20px;
+    background-image: url('/media/home/home logo.png');
+    background-size: cover; 
+    background-position: center; 
+    border: 1px solid white;
+}
+
+.description_div .description_title {
+    border-bottom: 1px solid white;
+}
+
+.description_div .description_title p{
+    font-weight: bolder;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;    
+    padding-top: 20px;    
+    padding-bottom: 20px;
+}
+
+.description_div .description_content {
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.description_div .description_content p{
+    margin-top: 10px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.faq_div {
+    position: absolute; 
+    right: 0; 
+    height: 650px;
+    width: 550px;
+    margin-right: 120px;
+    margin-top: 20px;
+    background-image: url('/media/home/home logo.png');
+    background-size: cover; 
+    background-position: center; 
+    border: 1px solid white;
+}
+
+.faq_div .faq_title {
+    border-bottom: 1px solid white;
+}
+
+.faq_div .faq_title p{
+    font-weight: bolder;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;    
+    padding-top: 20px;    
+    padding-bottom: 20px;
+}
+
+.faq_div .faq_content {
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.faq_div .faq_content .questions{
+    margin-top: 10px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.faq_div .faq_content .answers{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.faq_div .buttons_div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30px;
+}
+
+.faq_div .buttons_div a{
+    font-family: 'Outfit', sans-serif;
+    font-weight: bolder;
+    color: white;
+    height: 20px;
+    width: 150px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid white;
+    text-align: center;
+    line-height: 20px; 
+    text-decoration: none; 
+    margin-right: 20px;
+    background: linear-gradient(to bottom, rgb(80, 74, 74) 35%,  rgb(26, 25, 25) 65%);
+}
